@@ -5,8 +5,8 @@ library(lubridate)
 library(dplyr)
 
 # Source train and predict scripts
-source("train.r")
-source("predict.r")
+source("train_chap")
+source("predict_chap")
 
 # Run train and predict functions
 train_chap("input/trainData.csv", "output/model.bin")
