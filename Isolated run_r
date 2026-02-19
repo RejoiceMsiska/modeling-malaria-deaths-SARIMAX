@@ -1,0 +1,13 @@
+# Load required libraries
+library(forecast)
+library(ggplot2)
+library(lubridate)
+library(dplyr)
+
+# Source train and predict scripts
+source("train.r")
+source("predict.r")
+
+# Run train and predict functions
+train_chap("input/trainData.csv", "output/model.bin")
+predict_chap("output/model.bin", "input/trainData.csv", "input/futureClimateData.csv", "output/predictions.csv")
