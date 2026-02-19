@@ -1,0 +1,13 @@
+predict_chap <- function(model_fn, historic_data_fn, future_climatedata_fn, predictions_fn) {
+  # Load model
+  model <- readRDS(model_fn)
+  
+  # Load future climate data
+  future_data <- read.csv(future_climatedata_fn)
+  
+  # Make predictions
+  predictions <- forecast(model, h = 12, xreg = future_data)
+  
+  # Save predictions to file
+  write.csv(predictions, predictions_fn, row.names = FALSE)
+}
