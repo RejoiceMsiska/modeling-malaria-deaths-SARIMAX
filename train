@@ -1,0 +1,10 @@
+train_chap <- function(csv_fn, model_fn) {
+  # Load data
+  data <- read.csv(csv_fn)
+  
+  # Fit SARIMA model
+  model <- auto.arima(data$Deaths, seasonal = TRUE, stepwise = TRUE, approximation = TRUE)
+  
+  # Save model to file
+  saveRDS(model, file = model_fn)
+}
