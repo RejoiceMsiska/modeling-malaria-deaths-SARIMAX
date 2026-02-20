@@ -1,2 +1,1 @@
-# Modeling-malaria-deaths-SARIMAX
-Forecasting malaria deaths using SARIMA and SARIMAX models with climatic variables
+Adapting a SARIMAX model for CHAP integration, combining malaria and climate data
